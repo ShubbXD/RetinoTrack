@@ -30,7 +30,7 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-4 text-center text-sm text-gray-400"
         >
-          © 2025 <span className="text-white font-medium">Kresaliss</span>. All rights reserved.
+          © 2025 <span className="text-white font-medium">RetinoTrack</span>. All rights reserved.
         </motion.p>
 
         {/* Links Section */}

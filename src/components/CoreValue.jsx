@@ -1,49 +1,64 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
-import { Truck, ThermometerSnowflake, Leaf, Handshake, Lightbulb, HeartHandshake } from "lucide-react";
+import {
+  Eye,
+  Cpu,
+  ShieldCheck,
+  Users,
+  Lightbulb,
+  HeartHandshake,
+} from "lucide-react";
 
 export default function CoreValues() {
   const values = [
     {
-      icon: <Truck className="text-green-400 w-8 h-8" />,
-      title: "Speed with Integrity",
-      description: "Fast fulfillment for Quick Commerce while maintaining ethical sourcing.",
+      icon: <Eye className="text-green-400 w-8 h-8" />,
+      title: "Early Detection",
+      description:
+        "We prioritize early detection of diabetic retinopathy to prevent vision loss.",
       color: "from-green-900/40 to-green-500/10",
     },
     {
-      icon: <ThermometerSnowflake className="text-blue-400 w-8 h-8" />,
-      title: "Cold-Chain Precision",
-      description: "Temperature-controlled handling at every step.",
+      icon: <Cpu className="text-blue-400 w-8 h-8" />,
+      title: "Advanced Technology",
+      description:
+        "Leveraging AI-powered analysis for accurate retinal screening results.",
       color: "from-blue-900/40 to-blue-500/10",
     },
     {
-      icon: <Leaf className="text-emerald-400 w-8 h-8" />,
-      title: "Sustainability",
-      description: "Eco-friendly packaging and minimal waste operations.",
-      color: "from-emerald-900/40 to-emerald-500/10",
+      icon: <ShieldCheck className="text-teal-400 w-8 h-8" />,
+      title: "Reliable & Safe",
+      description:
+        "Our solutions ensure patient safety and secure handling of sensitive health data.",
+      color: "from-teal-900/40 to-teal-500/10",
     },
     {
-      icon: <Handshake className="text-yellow-400 w-8 h-8" />,
-      title: "Partnership",
-      description: "Transparent, founder-led relationships with clients and growers.",
+      icon: <Users className="text-yellow-400 w-8 h-8" />,
+      title: "Patient Focused",
+      description:
+        "Empowering communities and patients with accessible eye health tools.",
       color: "from-yellow-900/40 to-yellow-500/10",
     },
     {
       icon: <Lightbulb className="text-orange-400 w-8 h-8" />,
-      title: "Innovation",
-      description: "Data-driven demand planning, grading, and packaging solutions.",
+      title: "Innovative Solutions",
+      description:
+        "Continuous research and development to enhance diagnostic accuracy.",
       color: "from-orange-900/40 to-orange-500/10",
     },
     {
       icon: <HeartHandshake className="text-pink-400 w-8 h-8" />,
-      title: "Customer Centricity",
-      description: "Every process revolves around enhancing the customer’s experience and trust.",
+      title: "Care & Trust",
+      description:
+        "We build trust through reliable solutions that truly help patients preserve sight.",
       color: "from-pink-900/40 to-pink-500/10",
     },
   ];
 
   return (
-    <section className="relative py-24 px-8 bg-[#0a0a0a] text-white overflow-hidden">
+    <section className="relative py-24 px-8 bg-black text-white overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-500/10 blur-[250px] rounded-full -z-10"></div>
 
@@ -55,7 +70,7 @@ export default function CoreValues() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-extrabold tracking-tight"
         >
-          Our <span className="text-green-500">Core Values</span>
+          Our <span className="text-white">Core Values</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
@@ -63,7 +78,8 @@ export default function CoreValues() {
           transition={{ delay: 0.3 }}
           className="text-gray-400 mt-3 text-lg max-w-2xl mx-auto"
         >
-          The guiding principles that power our commitment to freshness, trust, and innovation.
+          The principles that drive our mission to make eye care accessible,
+          accurate, and reliable.
         </motion.p>
       </div>
 

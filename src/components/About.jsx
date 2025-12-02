@@ -1,10 +1,7 @@
-
 import { motion } from "framer-motion";
 import { Zap, Palette, Plug } from "lucide-react";
 
 export default function About() {
-
-
   return (
     <section
       id="about"
@@ -37,7 +34,7 @@ export default function About() {
         />
       </motion.div>
 
-      {/* Title and Description (shifted left + highlighted) */}
+      {/* Title and Description */}
       <div className="max-w-6xl mx-auto text-left">
         <motion.h1
           className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight"
@@ -45,7 +42,7 @@ export default function About() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          About <span className="text-green-400">KRESALISS</span>
+          About <span className="text-white">RetinoTrack</span>
         </motion.h1>
 
         <motion.p
@@ -54,18 +51,13 @@ export default function About() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          At{" "}
-          <span className="text-white font-bold">KRESALISS</span>, we’re
-          revolutionizing India’s fresh supply ecosystem. From sourcing premium
-          <span className="text-green-400 font-semibold"> fruits and vegetables </span>
-          directly from farms to delivering them to{" "}
-          <span className="text-yellow-400 font-semibold">
-            Quick Commerce, HoReCa, and Retail
-          </span>{" "}
-          — our tech-enabled cold-chain ensures{" "}
-          <span className="text-green-300 font-semibold">
-            quality, precision, and sustainability.
-          </span>
+          <span className="text-white font-bold">RetinoTrack</span> is transforming diabetic eye health
+          monitoring by shifting diagnosis from hospital-bound equipment to a
+          smart, wearable, patient-friendly system.
+          Our vision is to make retinal health screening{" "}
+          <span className="text-white font-semibold">affordable, accessible, and continuous</span>{" "}
+          — especially for patients who lack specialist care or struggle with
+          blinking, dryness, and blurry vision during scans.
         </motion.p>
       </div>
 
@@ -73,16 +65,11 @@ export default function About() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-start gap-12 mt-16">
         <motion.img
           src="/3.jpg"
-          alt="KRESALISS Operations"
+          alt="RetinoTrack Vision"
           className="max-w-sm w-full rounded-2xl shadow-lg"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          whileHover={{
-            scale: 1.05,
-            rotate: 1,
-            transition: { duration: 0.4 },
-          }}
         />
 
         <div className="flex flex-col ml-15 gap-8 max-w-lg">
@@ -97,10 +84,10 @@ export default function About() {
               <Zap className="text-green-400" size={22} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">Optimized Cold-Chain Flow</h3>
+              <h3 className="text-lg font-semibold">Blink-Proof Imaging</h3>
               <p className="text-slate-400 text-sm mt-1">
-                Every step — from farm pickup to last-mile delivery — is monitored
-                for freshness, using IoT-driven logistics.
+                Our AI stabilizes retinal scans even with blink interruptions,
+                dryness, or poor eye alignment.
               </p>
             </div>
           </motion.div>
@@ -116,10 +103,10 @@ export default function About() {
               <Palette className="text-yellow-400" size={22} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">Farm-to-Brand Consistency</h3>
+              <h3 className="text-lg font-semibold">Portable & Home-Ready</h3>
               <p className="text-slate-400 text-sm mt-1">
-                From exotic fruits to fresh-cut produce, KRESALISS ensures uniform
-                quality that aligns with modern brand standards.
+                No long queues or dilation — RetinoTrack empowers patients to
+                check their retinal health anytime, anywhere.
               </p>
             </div>
           </motion.div>
@@ -135,10 +122,10 @@ export default function About() {
               <Plug className="text-white" size={22} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">Seamless Integration</h3>
+              <h3 className="text-lg font-semibold">Continuous Monitoring</h3>
               <p className="text-slate-400 text-sm mt-1">
-                Partner platforms can plug into our system via API or dashboards —
-                ensuring real-time traceability and efficiency.
+                Doctors receive remote scan data, enabling early detection
+                and preventing irreversible vision loss.
               </p>
             </div>
           </motion.div>

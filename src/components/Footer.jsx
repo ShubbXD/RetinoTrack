@@ -20,7 +20,7 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-semibold tracking-wide"
         >
-          <span className="text-green-500">KRESALISS</span>
+          <span className="text-white">RetinoTrack</span>
         </motion.h1>
 
         {/* Copyright */}
@@ -30,7 +30,7 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-4 text-center text-sm text-gray-400"
         >
-          © 2025 <span className="text-green-500 font-medium">Kresaliss</span>. All rights reserved.
+          © 2025 <span className="text-white font-medium">Kresaliss</span>. All rights reserved.
         </motion.p>
 
         {/* Links Section */}
@@ -42,25 +42,25 @@ export default function Footer() {
         >
           <a
             href="#"
-            className="flex items-center gap-1 hover:text-green-400 transition"
+            className="flex items-center gap-1 hover:text-white transition"
           >
-            <Globe className="w-4 h-4 text-green-400" />
-            <span>www.kresaliss.com</span>
+            <Globe className="w-4 h-4 text-white" />
+            <span>www.RetinoTrack.com</span>
           </a>
           <div className="h-4 w-px bg-white/20"></div>
           <a
             href="#"
-            className="flex items-center gap-1 hover:text-green-400 transition"
+            className="flex items-center gap-1 hover:text-white transition"
           >
-            <ShieldCheck className="w-4 h-4 text-green-400" />
+            <ShieldCheck className="w-4 h-4 text-white" />
             <span>Privacy Policy</span>
           </a>
           <div className="h-4 w-px bg-white/20"></div>
           <a
             href="#"
-            className="flex items-center gap-1 hover:text-green-400 transition"
+            className="flex items-center gap-1 hover:text-white transition"
           >
-            <Info className="w-4 h-4 text-green-400" />
+            <Info className="w-4 h-4 text-white" />
             <span>Terms of Use</span>
           </a>
         </motion.div>
@@ -70,7 +70,7 @@ export default function Footer() {
           initial={{ opacity: 0, width: 0 }}
           whileInView={{ opacity: 1, width: "60%" }}
           transition={{ duration: 1 }}
-          className="mt-10 h-[1px] bg-gradient-to-r from-transparent via-green-500 to-transparent rounded-full"
+          className="mt-10 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent rounded-full"
         ></motion.div>
       </footer>
     </>

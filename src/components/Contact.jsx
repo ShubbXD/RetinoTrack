@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Globe, MessageCircle } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative flex flex-col items-center justify-center w-full py-20 px-6 bg-[#0a0a0a] text-white overflow-hidden">
-      {/* Gradient overlay for visual depth */}
+    <section
+      id="contact"
+      className="relative flex flex-col items-center justify-center w-full py-20 px-6 bg-black text-white overflow-hidden"
+    >
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-transparent pointer-events-none" />
 
       {/* Heading */}
@@ -15,7 +20,7 @@ export default function ContactSection() {
         transition={{ duration: 0.6 }}
         className="text-4xl md:text-5xl font-extrabold text-center mb-10 relative z-10"
       >
-        <span className="text-green-500">Contact</span> Us
+        <span className="text-white">Contact</span> Us
       </motion.h2>
 
       {/* Card Container */}
@@ -28,31 +33,24 @@ export default function ContactSection() {
         {/* Location */}
         <div className="flex items-start gap-4 mb-6">
           <MapPin className="text-green-400 w-6 h-6 flex-shrink-0" />
-          <p className="text-gray-300 text-base leading-relaxed">
-            <span className="text-white font-semibold">Plot No. 46</span>, Mancheswar Industrial Estate, <br />
-            Bhubaneswar, Odisha – 751017
+          <p className="text-white text-base leading-relaxed">
+            <span className="font-semibold">123 Example Street</span>, Sample City, State – 123456
           </p>
         </div>
 
         {/* Phone */}
         <div className="flex items-center gap-4 mb-4">
           <Phone className="text-green-400 w-6 h-6 flex-shrink-0" />
-          <a
-            href="tel:+919777267330"
-            className="text-gray-300 hover:text-green-400 transition"
-          >
-            +91 97772 67330
+          <a href="tel:+1234567890" className="text-white hover:text-green-400 transition">
+            +1 234 567 890
           </a>
         </div>
 
         {/* Email */}
         <div className="flex items-center gap-4 mb-4">
           <Mail className="text-green-400 w-6 h-6 flex-shrink-0" />
-          <a
-            href="mailto:admin@kresaliss.com"
-            className="text-gray-300 hover:text-green-400 transition"
-          >
-            admin@kresaliss.com
+          <a href="mailto:contact@example.com" className="text-white hover:text-green-400 transition">
+            contact@example.com
           </a>
         </div>
 
@@ -60,12 +58,12 @@ export default function ContactSection() {
         <div className="flex items-center gap-4 mb-4">
           <Globe className="text-green-400 w-6 h-6 flex-shrink-0" />
           <a
-            href="https://www.kresaliss.com"
+            href="https://www.example.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-green-400 transition"
+            className="text-white hover:text-green-400 transition"
           >
-            www.kresaliss.com
+            www.example.com
           </a>
         </div>
 
@@ -73,10 +71,10 @@ export default function ContactSection() {
         <div className="flex items-center gap-4">
           <MessageCircle className="text-green-400 w-6 h-6 flex-shrink-0" />
           <a
-            href="https://wa.me/919777267330"
+            href="https://wa.me/1234567890"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-green-400 transition"
+            className="text-white hover:text-green-400 transition"
           >
             Chat on WhatsApp
           </a>

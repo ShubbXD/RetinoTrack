@@ -1,43 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Rocket, Handshake, Truck, Globe2 } from "lucide-react";
+import { User, Users, Heart, Eye } from "lucide-react";
 
 export default function Mission() {
-  const missions = [
+  const helpTargets = [
     {
-      icon: <Rocket className="text-green-400 w-10 h-10 mt-4" />,
-      title: "Farm-to-Fork System",
+      icon: <User className="text-green-400 w-10 h-10 mt-4" />,
+      title: "Diabetic Patients",
       description:
-        "Build a farm-to-fork system that shortens delivery time without compromising quality.",
+        "Individuals living with diabetes who need regular retinal screenings to prevent vision loss.",
     },
     {
-      icon: <Handshake className="text-yellow-400 w-10 h-10 mt-4" />,
-      title: "Empowerment & Fair Sourcing",
+      icon: <Users className="text-yellow-400 w-10 h-10 mt-4" />,
+      title: "Rural Communities",
       description:
-        "Empower farmers and partners through fair sourcing and traceable logistics.",
+        "People in remote and underserved areas with limited access to ophthalmologists and diagnostic tools.",
     },
     {
-      icon: <Truck className="text-green-400 w-10 h-10 mt-4" />,
-      title: "Serving Quick Commerce",
+      icon: <Eye className="text-green-400 w-10 h-10 mt-4" />,
+      title: "Eye Care Professionals",
       description:
-        "Serve Quick Commerce and HoReCa partners with daily-ready, high-grade produce backed by cold-chain precision.",
+        "Clinics and healthcare providers looking for accessible, portable, and accurate retinal imaging solutions.",
     },
     {
-      icon: <Globe2 className="text-yellow-400 w-10 h-10 mt-4" />,
-      title: "Global Expansion",
+      icon: <Heart className="text-yellow-400 w-10 h-10 mt-4" />,
+      title: "Prevent Blindness Initiatives",
       description:
-        "Expand FRUNEST globally as a benchmark for trusted Indian freshness.",
+        "Organizations and NGOs focused on early detection and prevention of diabetic retinopathy and related eye diseases.",
     },
   ];
 
   return (
     <section
       id="mission"
-      className="relative py-24 px-6 md:px-16 bg-[#0a0a0a] text-white overflow-hidden"
+      className="relative py-24 px-6 md:px-16 bg-black text-white overflow-hidden"
     >
       {/* Background gradient effect */}
       <motion.div
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[#0d0d0d] to-[#050505]"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[#0a0a0a] to-[#000000]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
@@ -50,9 +50,9 @@ export default function Mission() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center font-medium text-green-400 px-10 py-1.5 rounded-full bg-green-950 border border-green-800 w-max mx-auto"
+          className="text-center font-medium text-white px-10 py-1.5 rounded-full bg-green-950 border border-green-800 w-max mx-auto"
         >
-          Mission / Aim
+          Who We Help
         </motion.p>
 
         <motion.h2
@@ -62,7 +62,7 @@ export default function Mission() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-extrabold text-center mx-auto mt-4 text-white"
         >
-          Driving India’s <span className="text-green-400">Fresh Revolution</span>
+          Our Focus is on <span className="text-white">Sight Preservation</span>
         </motion.h2>
 
         <motion.p
@@ -72,13 +72,13 @@ export default function Mission() {
           viewport={{ once: true }}
           className="mt-3 text-slate-300 max-w-2xl mx-auto"
         >
-          Our vision aligns technology, sustainability, and efficiency to bring the freshest produce from Indian farms to every corner of the world.
+          We aim to empower diabetic patients, support rural communities, and assist healthcare professionals by providing early detection tools to prevent vision loss from diabetic retinopathy.
         </motion.p>
       </div>
 
-      {/* Mission Cards */}
+      {/* Target Cards */}
       <div className="flex flex-wrap justify-center gap-8 mt-16">
-        {missions.map((item, index) => (
+        {helpTargets.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}

@@ -3,22 +3,19 @@ import { motion } from "framer-motion";
 
 const founders = [
   {
-    name: "Ajit Bagh",
+    name: "Deeprabha Singh",
     title: "Founder & Chief Operating Officer",
-    role: "Procurement, Sales, Finance, and Strategic Operations",
-    image: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=400",
+    role: "R&D and Technology, Product Development, Strategy & Operations",
   },
   {
-    name: "Abhigyan Prakash",
+    name: "Sai Sruti",
     title: "Co-Founder & Director",
     role: "Branding, Marketing, Finance, Modern Trade & HoReCa Growth",
-    image: "https://images.unsplash.com/photo-1603415526940-60f8e76eb19d?q=80&w=400",
   },
   {
-    name: "Rama Chandra Parida",
-    title: "Co-Founder & Chief Production Officer",
-    role: "Logistics, Production, Staff Management & Quality Control",
-    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=400",
+    name: "Shubhangam Biswal",
+    title: "IOT Developer",
+    role: "Innovation and looking over technology and development of hardware.",
   },
 ];
 
@@ -62,11 +59,6 @@ export default function Founders() {
             <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 via-emerald-500/10 to-blue-400/20 opacity-0 group-hover:opacity-100 blur-3xl transition-all duration-500"></div>
 
             <div className="relative z-10 bg-[#0a0a0a]/80 backdrop-blur-sm rounded-3xl p-8 flex flex-col items-center text-center">
-              <img
-                src={f.image}
-                alt={f.name}
-                className="w-28 h-28 rounded-full object-cover shadow-lg mb-5 border-2 border-green-500/30"
-              />
               <h3 className="text-xl font-bold text-white mb-1">{f.name}</h3>
               <p className="text-green-400 font-medium text-sm mb-3">{f.title}</p>
               <p className="text-gray-400 text-sm max-w-xs">{f.role}</p>

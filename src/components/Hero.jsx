@@ -1,149 +1,151 @@
+import React from "react";
 import { motion } from "framer-motion";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 overflow-hidden bg-[#0a0a0a] text-white pb-20 pt-10">
-      
-      {/* ───── Navbar ───── */}
-      <nav className="absolute top-6 left-0 w-full flex justify-between items-center px-6 md:px-16 lg:px-24 py-5 bg-transparent z-20">
-        <div className="text-3xl font-extrabold tracking-wide text-white">
-          <span className="text-white font-extrabold">KRESALISS</span>
+    <>
+      {/* GOOGLE FONT */}
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+          * { font-family: 'Poppins', sans-serif; }
+        `}
+      </style>
+
+      {/* BACKGROUND SVG */}
+      <svg
+        className="size-full absolute -z-10 inset-0"
+        width="1440"
+        height="720"
+        viewBox="0 0 1440 720"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path stroke="#1D293D" strokeOpacity=".7" d="M-15.227 702.342H1439.7" />
+        <circle cx="711.819" cy="372.562" r="308.334" stroke="#1D293D" strokeOpacity=".7" />
+        <circle cx="16.942" cy="20.834" r="308.334" stroke="#1D293D" strokeOpacity=".7" />
+        <path stroke="#1D293D" strokeOpacity=".7" d="M-15.227 573.66H1439.7M-15.227 164.029H1439.7" />
+        <circle cx="782.595" cy="411.166" r="308.334" stroke="#1D293D" strokeOpacity=".7" />
+      </svg>
+
+      {/* NAVBAR */}
+      <nav className="z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur text-white text-sm">
+        <h2 className="text-xl font-semibold">RetinoTrack</h2>
+
+        <div className="hidden md:flex items-center gap-8 transition duration-500">
+          <a href="/" className="hover:text-slate-300 transition">Home</a>
+          <a href="/vision" className="hover:text-slate-300 transition">Vision</a>
+          <a href="/story" className="hover:text-slate-300 transition">Story</a>
+          <a href="/dashboard" className="hover:text-slate-300 transition">Dashboard</a>
         </div>
-        <ul className="flex space-x-6 text-base md:space-x-10 font-semibold">
-          <li>
-            <a href="#home" className="hover:text-green-400 transition-colors">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-green-400 transition-colors">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="#products" className="hover:text-green-400 transition-colors">
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="#mission" className="hover:text-green-400 transition-colors">
-              Mission
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-green-400 transition-colors">
-              Contact Us
-            </a>
-          </li>
-        </ul>
+
+        <button className="hidden md:block px-6 py-2.5 text-black bg-white hover:bg-slate-200 active:scale-95 transition-all rounded-full">
+          Get in Touch
+        </button>
+
+        <button id="open-menu" className="md:hidden active:scale-90 transition">☰</button>
       </nav>
 
-      {/* Animated Background */}
-      <motion.div
-        className="absolute inset-0 -z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.4 }}
-        transition={{ duration: 1.5 }}
+      {/* MOBILE NAV */}
+      <div
+        id="mobile-navLinks"
+        className="fixed inset-0 z-[100] bg-black/40 text-white backdrop-blur flex flex-col items-center justify-center text-lg gap-8 md:hidden transition-transform duration-300 -translate-x-full"
       >
-        <motion.div
-          className="absolute w-[600px] h-[600px] bg-green-500/20 rounded-full blur-3xl -top-32 -left-20"
-          animate={{
-            x: [0, 40, -30, 0],
-            y: [0, 30, -40, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute w-[500px] h-[500px] bg-yellow-500/20 rounded-full blur-3xl bottom-0 right-0"
-          animate={{
-            x: [0, -50, 30, 0],
-            y: [0, -40, 50, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-        />
-      </motion.div>
-
-      {/* Left Content */}
-      <div className="flex flex-col items-center md:items-start z-10 mt-24 md:mt-36">
-        <motion.h1
-          className="text-center md:text-left text-4xl leading-[52px] md:text-5xl md:leading-[68px] font-extrabold max-w-xl text-slate-50"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <span className="text-green-400">India’s</span>{" "}
-          <span className="text-white font-bold">Fresh Supply Partner</span>{" "}
-          for{" "}
-          <span className="text-yellow-400 font-semibold">
-            Quick Commerce
-          </span>{" "}
-          & <span className="text-green-400 font-semibold">Beyond</span>.
-        </motion.h1>
-
-        <motion.p
-          className="text-center md:text-left text-sm text-slate-300 max-w-md mt-4 leading-relaxed font-medium"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          <span className="font-semibold text-white">KRESALISS</span> bridges{" "}
-          <span className="text-green-400 font-semibold">India’s farms</span> with{" "}
-          <span className="text-yellow-400 font-semibold">modern supply chains</span> — 
-          delivering <span className="text-green-300 font-semibold">exotic fruits</span>,{" "}
-          <span className="text-yellow-300 font-semibold">premium vegetables</span>, and{" "}
-          <span className="text-white font-semibold">fresh-cut produce</span> for{" "}
-          <span className="text-green-400 font-semibold">Quick Commerce</span>,{" "}
-          <span className="text-yellow-400 font-semibold">HoReCa</span>, and{" "}
-          <span className="text-green-400 font-semibold">Retail</span> with{" "}
-          <span className="text-white font-bold">cold-chain precision</span>.
-        </motion.p>
-
-        <motion.div
-          className="flex items-center gap-4 mt-8 text-sm"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
-          <button className="bg-white hover:bg-slate-200 text-black active:scale-95 rounded-md px-7 h-11 font-semibold">
-            Learn More
-          </button>
-          <button className="flex items-center gap-2 border border-slate-600 active:scale-95 hover:bg-white/10 transition text-white rounded-md px-6 h-11 font-semibold">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-video"
-            >
-              <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
-              <rect x="2" y="6" width="14" height="12" rx="2" />
-            </svg>
-            <span>Watch Our Story</span>
-          </button>
-        </motion.div>
+        <a href="/">Home</a>
+        <a href="/solution">Solution</a>
+        <a href="/research">Research</a>
+        <a href="/contact">Contact</a>
+        <button id="close-menu" className="bg-white text-black h-10 px-3 rounded-md">X</button>
       </div>
 
-      {/* Right Image */}
-      <motion.img
-        src="/1.jpg"
-        alt="KRESALISS Produce"
-        className="max-w-[220px] sm:max-w-[280px] md:max-w-[340px] lg:max-w-[400px] rounded-xl shadow-lg z-10 mt-10 md:mt-32"
-        initial={{ opacity: 0, scale: 0.9, rotate: -4 }}
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ duration: 1.2, ease: 'easeOut' }}
-        whileHover={{
-          scale: 1.05,
-          rotate: 2,
-          transition: { duration: 0.4 },
-        }}
-      />
-    </section>
+      {/* HERO SECTION */}
+      <section className="flex flex-col max-md:gap-20 md:flex-row pb-20 items-center justify-between mt-20 px-4 md:px-16 lg:px-24 xl:px-32">
+
+        {/* LEFT SECTION */}
+        <motion.div
+          className="flex flex-col md:items-start items-center -translate-x-4"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div
+            className="flex flex-wrap items-center justify-center p-1.5 rounded-full border border-slate-600 text-white text-xs"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <span className="px-3">Empowering Eye Care for Diabetic Patients</span>
+          </motion.div>
+
+          <motion.h1
+            className="text-center md:text-left text-5xl md:text-6xl font-medium max-w-xl text-slate-50 mt-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            A Smart, Patient-Friendly Eye Monitoring System
+          </motion.h1>
+
+          <motion.p
+            className="text-center md:text-left text-sm text-slate-200 max-w-lg mt-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            Say goodbye to costly hospital visits and blurry scans.
+            Our portable, AI-powered eye health device detects blinking,
+            improves scan quality, and supports early Diabetic Retinopathy monitoring — from home.
+          </motion.p>
+
+          <motion.div
+            className="flex items-center gap-4 mt-8 text-sm"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            <button className="bg-white hover:bg-slate-200 text-black active:scale-95 rounded-md px-7 h-11">
+              Get Started
+            </button>
+          </motion.div>
+        </motion.div>
+
+        {/* HERO IMAGE WITH GLASS & HOVER EFFECT */}
+        <motion.div
+          initial={{ opacity: 0, x: 40, scale: 0.9 }}
+          animate={{ opacity: 1, x: 60, scale: 1 }} // shifted more right
+          transition={{ duration: 0.8, delay: 0.5 }}
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0px 0px 25px rgba(255,255,255,0.3)",
+          }}
+          className="p-4 rounded-2xl backdrop-blur-lg bg-white/10 shadow-xl cursor-pointer transition-transform"
+        >
+          <img
+            src="1.jpg"
+            alt="device preview"
+            className="max-w-xs sm:max-w-sm lg:max-w-md rounded-lg"
+          />
+        </motion.div>
+      </section>
+
+      {/* NAV SCRIPT */}
+      <script>
+        {`
+          const openMenu = document.getElementById("open-menu");
+          const closeMenu = document.getElementById("close-menu");
+          const navLinks = document.getElementById("mobile-navLinks");
+
+          openMenu?.addEventListener("click", () => {
+            navLinks.classList.remove("-translate-x-full");
+            navLinks.classList.add("translate-x-0");
+          });
+
+          closeMenu?.addEventListener("click", () => {
+            navLinks.classList.remove("translate-x-0");
+            navLinks.classList.add("-translate-x-full");
+          });
+        `}
+      </script>
+    </>
   );
 }
